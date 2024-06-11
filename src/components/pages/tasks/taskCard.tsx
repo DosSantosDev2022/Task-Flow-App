@@ -2,11 +2,11 @@ import { Deadiline } from './deadline'
 
 interface TaskCardProps {
   title: string
-  /*  deadline: string */
+  date: string
   status: string
 }
 
-export function TaskCard({ title, status }: TaskCardProps) {
+export function TaskCard({ title, status, date }: TaskCardProps) {
   return (
     <div className=" border rounded-md p-4 flex items-center gap-2 justify-between w-full">
       <div className="w-full space-y-2">
@@ -19,7 +19,7 @@ export function TaskCard({ title, status }: TaskCardProps) {
 
         <Deadiline.Root className="justify-start">
           <Deadiline.Icon />
-          <Deadiline.Date date="20/05/2024" />
+          <Deadiline.Date date={date} />
         </Deadiline.Root>
       </div>
     </div>

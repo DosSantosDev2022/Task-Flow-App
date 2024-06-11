@@ -2,7 +2,7 @@ import { TaskCard } from './taskCard'
 
 interface TypeTaskProps {
   type: string
-  tasks: { name: string; status: string }[]
+  tasks: { name: string; status: string; date: string }[]
 }
 
 export function TypeTask({ type, tasks }: TypeTaskProps) {
@@ -34,7 +34,12 @@ export function TypeTask({ type, tasks }: TypeTaskProps) {
       </div>
       <div className="flex flex-col gap-2">
         {tasks.map((task) => (
-          <TaskCard status={task.status} title={task.name} key={task.name} />
+          <TaskCard
+            date={task.date}
+            status={task.status}
+            title={task.name}
+            key={task.name}
+          />
         ))}
       </div>
     </div>

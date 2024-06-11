@@ -10,12 +10,12 @@ export function Tasks() {
   const [filter, setFilter] = useState<FilterType>('all')
 
   const tasks = [
-    { name: 'Tarefa 1', status: 'todo' },
-    { name: 'Tarefa 2', status: 'in-progress' },
-    { name: 'Tarefa 3', status: 'completed' },
-    { name: 'Tarefa 4', status: 'todo' },
-    { name: 'Tarefa 5', status: 'in-progress' },
-    { name: 'Tarefa 6', status: 'completed' },
+    { name: 'Tarefa 1', status: 'todo', date: '25/04/2024' },
+    { name: 'Tarefa 2', status: 'in-progress', date: '18/04/2024' },
+    { name: 'Tarefa 3', status: 'completed', date: '5/08/2024' },
+    { name: 'Tarefa 4', status: 'todo', date: '12/10/2024' },
+    { name: 'Tarefa 5', status: 'in-progress', date: '5/03/2024' },
+    { name: 'Tarefa 6', status: 'completed', date: '18/08/2024' },
   ]
 
   const filteredTasks = (status: string) => {
